@@ -120,3 +120,53 @@ dict1={"name":"prashanth","age":21}
 dict3=dict1.update(roll=101,Group="Mstcs")
 # dict4=dict1.update(dict3)
 print(dict1)
+
+d1={
+  "name":"test",
+  "role":"python",
+  "frameWroks":[
+    {
+      "id":"1",
+      "title":"abcd"
+    },
+    {                                              #updating keys in dictionary of key has list of key values                                               
+      "id":"2",
+      "title":"ABCD"
+    }
+    ]
+}
+d2=d1["frameWroks"][0]["id"]="10"
+d2=d1["frameWroks"][0]["title"]="Prashanth"
+d2=d1["frameWroks"][1]["id"]="20"
+d2=d1["frameWroks"][1]["title"]="Saikrishna"
+# print(d1)
+
+# d3=d1.get("Prashanth")    #(dictionary get method)#if key is not in given dictionary its returns None 
+# d3=d1["Prashanth"]       #it shows key error if key is not there in given dictionary
+# print(d3)
+
+
+dict1={"id":1,"id":2,"id":3}
+
+d1={
+  "name":"test",
+  "role":"python",
+  "frameWroks":[
+    {
+      "id":"1",
+      "title":"abcd"
+    },
+    {                                              #updating keys in dictionary of key has list of key values                                               
+      "id":"2",
+      "title":"ABCD"
+    }
+    ]
+}
+# d2=d1.get("frameWroks")
+# print(d2)
+for each_dict in d1.get("frameWroks"):
+  # print(each_dict)
+  if each_dict.get("d")=="1":
+    dummy_dict={"name":"Prashanth"}
+    each_dict.update(dummy_dict)
+    print(each_dict)
